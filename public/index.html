@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dentist activities</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="./scripts/script.js"></script>
+</head>
+<body>
+<h1>Dentist activities</h1>
+<div class="sidenav">
+  <a href="#newpatient" onclick="displayForm('Form_newPatient')">New patient</a>
+  <a href="#findpatient" onclick="displayForm('Form_findPatient')">Find patient</a>
+  <a href="#statistics" onclick="displayForm('Form_statistics')">Statistics</a>
+  <a href="#settings" onclick="displayForm('Form_settings')">Settings</a>
+  <a href="#about" action='/about'>About</a>
+</div>
+<div id="query_result">
+
+  
+</div>
+<form class="Forms" id="Form_newPatient" style="visibility:hidden;" method='post' action='/send_to_database'>
+    <p>Add a new patient</p>
+    <label for="text_surname">Surname</label>
+    <input type="text" name="surname" id="text_surname" placeholder="Surname"><br>
+    <label for="text_firstname">Firstname</label>
+    <input type="text" name="firstname" id="text_firstname" placeholder="Firstname"><br>
+    <label for="text_town">Town</label>
+    <input type="text" name="town" id="text_town" placeholder="Town"><br>
+    <label for="number_ssc">Social security card</label>
+    <input type="text" name="ssc" id="number_ssc" placeholder="SSC number"><br>
+    <input type='submit'> 
+  </form>
+  <form class="Forms"  id="Form_findPatient" style="visibility:hidden;" onsubmit="loadDoc()">
+    <p>Find a patient</p>
+    <label for="text_surname">Surname</label>
+    <input type="text" name="surname" id="text_surname" placeholder="Surname"><br>
+    <label for="text_firstname">Firstname</label>
+    <input type="text" name="firstname" id="text_firstname" placeholder="Firstname"><br>
+    <label for="text_town">Town</label>
+    <input type="text" name="town" id="text_town" placeholder="Town"><br>
+    <label for="number_ssc">Social security card</label>
+    <input type="text" name="ssc" id="number_ssc" placeholder="SSC number"><br>
+    <input type='submit'> 
+  </form>
+
+</body>
+</html> 
